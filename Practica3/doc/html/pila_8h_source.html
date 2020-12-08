@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Pila_max: Fichero Fuente include/pila.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Pila_max
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('pila_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">pila.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="pila_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef __Pila_H__</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define __Pila_H__</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;cassert&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classPila.html">   43</a></span>&#160;<span class="keyword">class </span><a class="code" href="classPila.html">Pila</a>{</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">struct </span>Celda {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      T <a class="code" href="structelemento.html">elemento</a>;        </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      Celda * siguiente; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      Celda() : siguiente(0){</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      Celda(<span class="keyword">const</span> T &amp; elem, Celda * sig): <a class="code" href="structelemento.html">elemento</a>(elem), siguiente(sig){</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    };</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    Celda * primera; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">int</span> num_elem;    </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="comment">// ---------------  Constructores ----------------</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="classPila.html#a7ff5138a6888873379192365d7acbde4">   71</a></span>&#160;<span class="comment"></span>    <a class="code" href="classPila.html#a7ff5138a6888873379192365d7acbde4">Pila</a>(): primera(0), num_elem(0){</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="classPila.html#a7ff5138a6888873379192365d7acbde4">Pila</a>(<span class="keyword">const</span> <a class="code" href="classPila.html">Pila&lt;T&gt;</a> &amp; otra);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="comment">// ------------------ Destructor ------------------</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment"></span>    <a class="code" href="classPila.html#a5bc38b4a06fdc0c1abc8736ebc5ba839">~Pila</a>();</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="comment">// --------------- Otras funciones ---------------</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment"></span>    <a class="code" href="classPila.html">Pila</a>&amp; <a class="code" href="classPila.html#aa70b5f3e6b1672addafe1d67cb0c4442">operator= </a>(<span class="keyword">const</span> <a class="code" href="classPila.html">Pila&lt;T&gt;</a>&amp; otra);</div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="classPila.html#a326618921557d69842196303b9832b61">   92</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classPila.html#a326618921557d69842196303b9832b61">vacia</a>()<span class="keyword"> const</span>{</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;      <span class="keywordflow">return</span> (primera==0);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    }</div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="classPila.html#a6ebbf22a941c4a8f4e1c2efbfdfa85d2">   98</a></span>&#160;    T&amp; <a class="code" href="classPila.html#a6ebbf22a941c4a8f4e1c2efbfdfa85d2">tope</a> (){</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;      assert(primera!=0);       <span class="comment">//Si la pila est� vac�a, abortar</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;      <span class="keywordflow">return</span> primera-&gt;elemento; <span class="comment">//Devuelve el elemento del tope de la pila</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    }</div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="classPila.html#ae91d6a21cee76a64b6da15ce49265f0f">  105</a></span>&#160;    <span class="keyword">const</span> T &amp; <a class="code" href="classPila.html#ae91d6a21cee76a64b6da15ce49265f0f">tope</a> ()<span class="keyword"> const</span>{</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;      assert(primera!=0);       <span class="comment">//Si la pila est� vac�a, abortar</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;      <span class="keywordflow">return</span> primera-&gt;elemento; <span class="comment">//Devuelve el elemento del tope de la pila</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    }</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPila.html#a02ff6cf06e5e8f719260ecbec8b34797">poner</a>(<span class="keyword">const</span> T &amp; elem);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPila.html#a7eb7aca18dffbc1d570195de1e446054">quitar</a>();</div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="classPila.html#a1268523f53fe982a9872a6b42c515d01">  121</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classPila.html#a1268523f53fe982a9872a6b42c515d01">num_elementos</a>()<span class="keyword"> const</span>{</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;      <span class="keywordflow">return</span> num_elem;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    }</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;};</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="preprocessor">#include &lt;pila.cpp&gt;</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="preprocessor">#endif // __Pila_H__</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclassPila_html_a6ebbf22a941c4a8f4e1c2efbfdfa85d2"><div class="ttname"><a href="classPila.html#a6ebbf22a941c4a8f4e1c2efbfdfa85d2">Pila::tope</a></div><div class="ttdeci">T &amp; tope()</div><div class="ttdoc">Devuelve el elemento del tope de la pila.</div><div class="ttdef"><b>Definition:</b> pila.h:98</div></div>
+<div class="ttc" id="astructelemento_html"><div class="ttname"><a href="structelemento.html">elemento</a></div><div class="ttdoc">T.D.A Elemento.</div><div class="ttdef"><b>Definition:</b> Pila_max.h:32</div></div>
+<div class="ttc" id="aclassPila_html_a7ff5138a6888873379192365d7acbde4"><div class="ttname"><a href="classPila.html#a7ff5138a6888873379192365d7acbde4">Pila::Pila</a></div><div class="ttdeci">Pila()</div><div class="ttdoc">Constructor por defecto.</div><div class="ttdef"><b>Definition:</b> pila.h:71</div></div>
+<div class="ttc" id="aclassPila_html_a326618921557d69842196303b9832b61"><div class="ttname"><a href="classPila.html#a326618921557d69842196303b9832b61">Pila::vacia</a></div><div class="ttdeci">bool vacia() const</div><div class="ttdoc">Comprueba si la pila est� vac�a.</div><div class="ttdef"><b>Definition:</b> pila.h:92</div></div>
+<div class="ttc" id="aclassPila_html_ae91d6a21cee76a64b6da15ce49265f0f"><div class="ttname"><a href="classPila.html#ae91d6a21cee76a64b6da15ce49265f0f">Pila::tope</a></div><div class="ttdeci">const T &amp; tope() const</div><div class="ttdoc">Devuelve el elemento del tope de una pila constante.</div><div class="ttdef"><b>Definition:</b> pila.h:105</div></div>
+<div class="ttc" id="aclassPila_html_a02ff6cf06e5e8f719260ecbec8b34797"><div class="ttname"><a href="classPila.html#a02ff6cf06e5e8f719260ecbec8b34797">Pila::poner</a></div><div class="ttdeci">void poner(const T &amp;elem)</div><div class="ttdoc">A�ade un elemento &quot;encima&quot; del tope de la pila.</div></div>
+<div class="ttc" id="aclassPila_html_aa70b5f3e6b1672addafe1d67cb0c4442"><div class="ttname"><a href="classPila.html#aa70b5f3e6b1672addafe1d67cb0c4442">Pila::operator=</a></div><div class="ttdeci">Pila &amp; operator=(const Pila&lt; T &gt; &amp;otra)</div><div class="ttdoc">Operador de asignaci�n.</div></div>
+<div class="ttc" id="aclassPila_html"><div class="ttname"><a href="classPila.html">Pila</a></div><div class="ttdoc">T.D.A. Pila.</div><div class="ttdef"><b>Definition:</b> pila.h:43</div></div>
+<div class="ttc" id="aclassPila_html_a7eb7aca18dffbc1d570195de1e446054"><div class="ttname"><a href="classPila.html#a7eb7aca18dffbc1d570195de1e446054">Pila::quitar</a></div><div class="ttdeci">void quitar()</div><div class="ttdoc">Quita el elemento del tope de la pila.</div></div>
+<div class="ttc" id="aclassPila_html_a5bc38b4a06fdc0c1abc8736ebc5ba839"><div class="ttname"><a href="classPila.html#a5bc38b4a06fdc0c1abc8736ebc5ba839">Pila::~Pila</a></div><div class="ttdeci">~Pila()</div><div class="ttdoc">Destructor.</div></div>
+<div class="ttc" id="aclassPila_html_a1268523f53fe982a9872a6b42c515d01"><div class="ttname"><a href="classPila.html#a1268523f53fe982a9872a6b42c515d01">Pila::num_elementos</a></div><div class="ttdeci">int num_elementos() const</div><div class="ttdoc">Devuelve el n�mero de elementos de la pila.</div><div class="ttdef"><b>Definition:</b> pila.h:121</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="pila_8h.html">pila.h</a></li>
+    <li class="footer">Generado por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

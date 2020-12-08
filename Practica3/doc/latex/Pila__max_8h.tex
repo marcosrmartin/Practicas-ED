@@ -1,0 +1,65 @@
+\hypertarget{Pila__max_8h}{}\doxysection{Referencia del Archivo include/\+Pila\+\_\+max.h}
+\label{Pila__max_8h}\index{include/Pila\_max.h@{include/Pila\_max.h}}
+
+
+Fichero cabecera del T\+DA Pila\+\_\+max\+\_\+cola.  
+
+
+{\ttfamily \#include $<$ostream$>$}\newline
+{\ttfamily \#include $<$pila\+\_\+max\+\_\+vd.\+h$>$}\newline
+\doxysubsection*{Clases}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structelemento}{elemento$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em T.\+D.\+A Elemento. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{defines}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{Pila__max_8h_a5ee137079c448f8e19ee449bd929fa1e}\label{Pila__max_8h_a5ee137079c448f8e19ee449bd929fa1e}} 
+\#define {\bfseries C\+U\+A\+L\+\_\+\+C\+O\+M\+P\+I\+LA}~1
+\end{DoxyCompactItemize}
+\doxysubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\ostream \& \mbox{\hyperlink{Pila__max_8h_a2ea126930f4f80dba6f674351275bb0d}{operator$<$$<$}} (ostream \&os, const \mbox{\hyperlink{structelemento}{elemento}}$<$ T $>$ \&elem)
+\begin{DoxyCompactList}\small\item\em Sobrecarga del metodo de salida. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Fichero cabecera del T\+DA Pila\+\_\+max\+\_\+cola. 
+
+\begin{DoxyDate}{Fecha}
+2020-\/11-\/22
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2020 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Documentación de las funciones}
+\mbox{\Hypertarget{Pila__max_8h_a2ea126930f4f80dba6f674351275bb0d}\label{Pila__max_8h_a2ea126930f4f80dba6f674351275bb0d}} 
+\index{Pila\_max.h@{Pila\_max.h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Pila\_max.h@{Pila\_max.h}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{os,  }\item[{const \mbox{\hyperlink{structelemento}{elemento}}$<$ T $>$ \&}]{elem }\end{DoxyParamCaption})}
+
+
+
+Sobrecarga del metodo de salida. 
+
+
+\begin{DoxyTemplParams}{Parámetros del template}
+{\em T} & Tipo de dato sobre el que se va a trabajar. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parámetros}
+{\em os} & se encarga de la salida de datos. \\
+\hline
+{\em elem} & {\ttfamily elemento} del cual se mostraran los datos. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+ostream\& 
+\end{DoxyReturn}

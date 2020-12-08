@@ -1,0 +1,129 @@
+\hypertarget{classPila}{}\doxysection{Referencia de la plantilla de la Clase Pila$<$ T $>$}
+\label{classPila}\index{Pila$<$ T $>$@{Pila$<$ T $>$}}
+
+
+T.\+D.\+A. \mbox{\hyperlink{classPila}{Pila}}.  
+
+
+
+
+{\ttfamily \#include $<$pila.\+h$>$}
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPila_a7ff5138a6888873379192365d7acbde4}\label{classPila_a7ff5138a6888873379192365d7acbde4}} 
+\mbox{\hyperlink{classPila_a7ff5138a6888873379192365d7acbde4}{Pila}} ()
+\begin{DoxyCompactList}\small\item\em Constructor por defecto. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPila_a28dd26119fa59e69b6ce4d3ccd89476c}{Pila}} (const \mbox{\hyperlink{classPila}{Pila}}$<$ T $>$ \&otra)
+\begin{DoxyCompactList}\small\item\em Constructor de copias. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPila_a5bc38b4a06fdc0c1abc8736ebc5ba839}\label{classPila_a5bc38b4a06fdc0c1abc8736ebc5ba839}} 
+\mbox{\hyperlink{classPila_a5bc38b4a06fdc0c1abc8736ebc5ba839}{$\sim$\+Pila}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPila}{Pila}} \& \mbox{\hyperlink{classPila_aa70b5f3e6b1672addafe1d67cb0c4442}{operator=}} (const \mbox{\hyperlink{classPila}{Pila}}$<$ T $>$ \&otra)
+\begin{DoxyCompactList}\small\item\em Operador de asignaci{\ucr}n. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPila_a326618921557d69842196303b9832b61}\label{classPila_a326618921557d69842196303b9832b61}} 
+bool \mbox{\hyperlink{classPila_a326618921557d69842196303b9832b61}{vacia}} () const
+\begin{DoxyCompactList}\small\item\em Comprueba si la pila est{\ucr} vac{\ucr}a. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPila_a6ebbf22a941c4a8f4e1c2efbfdfa85d2}\label{classPila_a6ebbf22a941c4a8f4e1c2efbfdfa85d2}} 
+T \& \mbox{\hyperlink{classPila_a6ebbf22a941c4a8f4e1c2efbfdfa85d2}{tope}} ()
+\begin{DoxyCompactList}\small\item\em Devuelve el elemento del tope de la pila. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPila_ae91d6a21cee76a64b6da15ce49265f0f}\label{classPila_ae91d6a21cee76a64b6da15ce49265f0f}} 
+const T \& \mbox{\hyperlink{classPila_ae91d6a21cee76a64b6da15ce49265f0f}{tope}} () const
+\begin{DoxyCompactList}\small\item\em Devuelve el elemento del tope de una pila constante. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPila_a02ff6cf06e5e8f719260ecbec8b34797}{poner}} (const T \&elem)
+\begin{DoxyCompactList}\small\item\em A{\ucr}ade un elemento \char`\"{}encima\char`\"{} del tope de la pila. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPila_a7eb7aca18dffbc1d570195de1e446054}\label{classPila_a7eb7aca18dffbc1d570195de1e446054}} 
+void \mbox{\hyperlink{classPila_a7eb7aca18dffbc1d570195de1e446054}{quitar}} ()
+\begin{DoxyCompactList}\small\item\em Quita el elemento del tope de la pila. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPila_a1268523f53fe982a9872a6b42c515d01}\label{classPila_a1268523f53fe982a9872a6b42c515d01}} 
+int \mbox{\hyperlink{classPila_a1268523f53fe982a9872a6b42c515d01}{num\+\_\+elementos}} () const
+\begin{DoxyCompactList}\small\item\em Devuelve el n{\ucr}mero de elementos de la pila. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\subsubsection*{template$<$class T$>$\newline
+class Pila$<$ T $>$}
+
+T.\+D.\+A. \mbox{\hyperlink{classPila}{Pila}}. 
+
+Una instancia {\itshape v} del tipo de datos abstracto \mbox{\hyperlink{classPila}{Pila}} sobre el tipo {\ttfamily T} es una lista de elementos del mismo con un funcionamiento {\itshape L\+I\+FO} (Last In, First Out). En una pila, las operaciones de inserci{\ucr}n y borrado de elementos tienen lugar en uno de los extremos denominado {\itshape Tope}. Una pila de longitud {\itshape n} la denotamos
+
+
+\begin{DoxyItemize}
+\item \mbox{[}a1,a2,a3,..,an$>$
+\end{DoxyItemize}
+
+donde {\itshape ai} es el elemento de la posici{\ucr}n i-\/{\ucr}sima.
+
+En esta pila, tendremos acceso {\ucr}nicamente al elemento del {\itshape Tope}, es decir, a {\itshape an}. El borrado o consulta de un elemento ser{\ucr} sobre {\itshape an}, y la inserci{\ucr}n de un nuevo elemento se har{\ucr} sobre {\ucr}ste. Quedando el elemento insertado como {\itshape Tope} de la pila.
+
+Si {\itshape n=0} diremos que la pila est{\ucr} vac{\ucr}a.
+
+El espacio requerido para el almacenamiento es O(n). Donde n es el n{\ucr}mero de elementos de la \mbox{\hyperlink{classPila}{Pila}}.
+
+\begin{DoxyAuthor}{Autor}
+J.\+Fdez-\/Valdivia. 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Fecha}
+Octubre 2011 
+\end{DoxyDate}
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{classPila_a28dd26119fa59e69b6ce4d3ccd89476c}\label{classPila_a28dd26119fa59e69b6ce4d3ccd89476c}} 
+\index{Pila$<$ T $>$@{Pila$<$ T $>$}!Pila@{Pila}}
+\index{Pila@{Pila}!Pila$<$ T $>$@{Pila$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Pila()}{Pila()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classPila}{Pila}}$<$ T $>$\+::\mbox{\hyperlink{classPila}{Pila}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPila}{Pila}}$<$ T $>$ \&}]{otra }\end{DoxyParamCaption})}
+
+
+
+Constructor de copias. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em otra} & La pila de la que se har{\ucr} la copia. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classPila_aa70b5f3e6b1672addafe1d67cb0c4442}\label{classPila_aa70b5f3e6b1672addafe1d67cb0c4442}} 
+\index{Pila$<$ T $>$@{Pila$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!Pila$<$ T $>$@{Pila$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classPila}{Pila}}\& \mbox{\hyperlink{classPila}{Pila}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPila}{Pila}}$<$ T $>$ \&}]{otra }\end{DoxyParamCaption})}
+
+
+
+Operador de asignaci{\ucr}n. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em otra} & La pila que se va a asignar. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classPila_a02ff6cf06e5e8f719260ecbec8b34797}\label{classPila_a02ff6cf06e5e8f719260ecbec8b34797}} 
+\index{Pila$<$ T $>$@{Pila$<$ T $>$}!poner@{poner}}
+\index{poner@{poner}!Pila$<$ T $>$@{Pila$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{poner()}{poner()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classPila}{Pila}}$<$ T $>$\+::poner (\begin{DoxyParamCaption}\item[{const T \&}]{elem }\end{DoxyParamCaption})}
+
+
+
+A{\ucr}ade un elemento \char`\"{}encima\char`\"{} del tope de la pila. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em elem} & Elemento que se va a a{\ucr}adir. \\
+\hline
+\end{DoxyParams}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{pila_8h}{pila.\+h}}\end{DoxyCompactItemize}
